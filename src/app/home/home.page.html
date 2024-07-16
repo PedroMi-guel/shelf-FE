@@ -1,20 +1,76 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <ion-avatar>
+    <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+  </ion-avatar>
+  <ion-text>
+    <ion-searchbar value="Buscar articulos"></ion-searchbar>
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>Bienvenido a Self</ion-card-title>
+        <ion-card-subtitle>Articulos que podras encontrar</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-thumbnail>
+            <ion-label>Cañon 1</ion-label>
+            <ion-card-subtitle color="primary">Disponible</ion-card-subtitle>
+          </ion-item>
+
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-thumbnail>
+            <ion-label>Cañon 2</ion-label>
+            <ion-card-subtitle color="primary">Disponible</ion-card-subtitle>
+          </ion-item>
+
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-thumbnail>
+            <ion-label>Cañon 3</ion-label>
+            <ion-card-subtitle color="primary" >Disponible</ion-card-subtitle>
+          </ion-item>
+
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-thumbnail>
+            <ion-label>Cañon 4</ion-label>
+            <ion-card-subtitle color="danger">No disponible</ion-card-subtitle>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-thumbnail>
+            <ion-label>HDMI 1</ion-label>
+            <ion-card-subtitle color="primary">Disponible</ion-card-subtitle>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-thumbnail>
+            <ion-label>HDMI 2</ion-label>
+            <ion-card-subtitle color="primary">Disponible</ion-card-subtitle>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-thumbnail>
+            <ion-label>HDMI 3</ion-label>
+            <ion-card-subtitle color="danger"> No disponible</ion-card-subtitle>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    
+
