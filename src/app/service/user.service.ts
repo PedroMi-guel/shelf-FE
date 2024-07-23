@@ -9,7 +9,7 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
   getElemntss() {
-    return this.http.get<Userr[]>('http://localhost:3000/api/users');
+    return this.http.get<User[]>('http://localhost:3000/api/users');
   }
 
   getUser(id: number) {
