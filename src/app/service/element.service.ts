@@ -27,5 +27,5 @@ export class ElementService {
   deleteElemnt(id: number) {
     return this.http.delete(`http://localhost:3000/api/elements/${id}`);
   }
-  
+
 }
