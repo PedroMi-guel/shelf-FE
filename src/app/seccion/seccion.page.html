@@ -1,0 +1,66 @@
+<<ion-content [fullscreen]="true" class="ion-padding">
+
+
+  <ion-avatar>
+    <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+  </ion-avatar>
+  <ion-text>
+    <ion-searchbar value="Buscar articulos"></ion-searchbar>
+      <h1>Bienvenido a Self</h1>
+      <p> Puedes comenzar seleccionando lo que deseas realizar</p>
+  </ion-text>
+
+  <div class="actions">
+      <div class="login-buttons">
+          <ion-button color="dark" round outline routerLink="/registro" expand="block" >Regístrate</ion-button>
+          <ion-button color="dark" round outline routerLink="/login" expand="block">Iniciar sesión</ion-button>
+      </div>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-select color="dark" round outline
+        class="always-flip"
+        toggleIcon="caret-down-sharp"
+        interface="popover"
+        label="Categorías"
+        placeholder="Select Categorías"
+      >
+        <ion-select-option value="apples">Video</ion-select-option>
+        <ion-select-option value="oranges">Audio</ion-select-option>
+        <ion-select-option value="bananas">Entrada</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-select
+      color="dark" round outline
+        class="never-flip"
+        toggleIcon="caret-down-sharp"
+        interface="popover"
+        label="Disponible"
+        placeholder="Select disponible"
+      >
+        <ion-select-option value="apples">Cañon 1</ion-select-option>
+        <ion-select-option value="oranges">HDM1 3</ion-select-option>
+        <ion-select-option value="bananas">Bocina 4</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-select
+        color="dark" round outline
+          class="always-flip"
+          toggleIcon="caret-down-sharp"
+          interface="popover"
+          label="No disponibles"
+          placeholder="Select NoDispibles"
+        >
+          <ion-select-option value="Video">Cañon 3</ion-select-option>
+          <ion-select-option value="Audio">HDMI 1</ion-select-option>
+          <ion-select-option value="Bocina">Bocina 1</ion-select-option>
+        </ion-select>
+      </ion-item>
+  </ion-list>
+
+
