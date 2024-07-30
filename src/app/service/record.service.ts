@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Record } from './../interfaces/record';
+
 
 @Injectable({
   providedIn: 'root'

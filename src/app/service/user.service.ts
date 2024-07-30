@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { User } from './../interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,7 @@ export class UserService {
   }
 
   updateUser(user: User) {
-    return this.http.put<User>(`http://localhost:3000/api/users/${user.id}`, User);
+    return this.http.put<User>(`http://localhost:3000/api/users/${user.id}`, user);
   }
 
   deleteElemnt(id: number) {
