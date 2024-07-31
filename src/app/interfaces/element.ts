@@ -4,5 +4,5 @@ export interface Element {
   id: number;
   name: string;
   description: string;
-  Category_id: number;
+  CategoryId: number;
 }

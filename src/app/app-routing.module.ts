@@ -13,16 +13,30 @@ const routes: Routes = [
   },
   {
     path: 'category',
-    loadChildren: () => import('./category/category.module').then( m => m.CategoryPageModule)
+    loadChildren: () => import('./pages/category/category.module').then( m => m.CategoryPageModule)
   },
   {
     path: 'element',
-    loadChildren: () => import('./element/element.module').then( m => m.ElementPageModule)
+    loadChildren: () => import('./pages/element/element.module').then( m => m.ElementPageModule)
   },
   {
     path: 'user',
-    loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
+    loadChildren: () => import('./pages/user/user.module').then( m => m.UserPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'shelf',
+    loadChildren: () => import('./pages/shelf/shelf.module').then( m => m.ShelfPageModule)
+  },
+  {
+    path: 'new-category',
+    loadChildren: () => import('./pages/new-category/new-category.module').then( m => m.NewCategoryPageModule)
+  },
+
+
 
 ];
 

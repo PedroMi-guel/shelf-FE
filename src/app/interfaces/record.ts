@@ -4,10 +4,10 @@ import { Element } from './element';
 export interface Record {
   id: number;
   state:number;
-  User_id:number;
-  Element_id: number;
-  requested_time: string;
-  request_time: string;
-  end_time: string;
+  UserId:number;
+  ElementId: number;
+  requested_time: number;
+  request_time: number;
+  end_time: number;
 
 }

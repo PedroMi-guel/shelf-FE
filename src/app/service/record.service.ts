@@ -18,7 +18,10 @@ export class RecordService {
   getRecord(id: number) {
     return this.http.get<Record>(`http://localhost:3000/api/records/${id}`);
   }
-
+  
+  getRecordbyUser(id:number){
+    return this.http.get<Record>(`http://localhost:3000/api/records/getByUser/${id}`);
+  }
   createElemnt(record: Record) {
     return this.http.post<Record>('http://localhost:3000/api/records', record);
   }

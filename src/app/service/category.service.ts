@@ -30,4 +30,7 @@ export class CategoryService {
     return this.http.delete(`http://localhost:3000/api/categories/${id}`);
   }
 
+  fetchElemnt() {
+    return this.http.delete(`http://localhost:3000/api/categories/serach`);
+  }
 }

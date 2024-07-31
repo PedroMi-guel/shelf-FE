@@ -28,4 +28,7 @@ export class ElementService {
     return this.http.delete(`http://localhost:3000/api/elements/${id}`);
   }
 
+  fetchElemnt() {
+    return this.http.delete(`http://localhost:3000/api/elements/serach`);
+  }
 }

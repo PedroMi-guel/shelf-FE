@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { UserPageRoutingModule } from './user-routing.module';
+import { ShelfPageRoutingModule } from './shelf-routing.module';
 
-import { UserPage } from './user.page';
+import { ShelfPage } from './shelf.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    UserPageRoutingModule
+    ShelfPageRoutingModule
   ],
-  declarations: [UserPage]
+  declarations: [ShelfPage]
 })
-export class UserPageModule {}
+export class ShelfPageModule {}

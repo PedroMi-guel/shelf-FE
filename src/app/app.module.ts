@@ -7,7 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouteReuseStrategy } from '@angular/router';
-import { UserPage } from './user/user.page';
+import { UserPage } from './pages/user/user.page';
+import { CategoryPage } from './pages/category/category.page';
 import { HomePage } from './home/home.page';
 
 @NgModule({
