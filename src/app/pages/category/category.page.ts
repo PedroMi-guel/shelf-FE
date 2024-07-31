@@ -18,10 +18,13 @@ export class CategoryPage implements OnInit {
     this.router.navigate(['../new-category'])
   }
 
-  async deleteCategory(categoryId: number){
-    console.log(categoryId);
-    this.categoryService.deleteCategory(categoryId);
-    console.log('categoryIddeleted');
+  async deleteCategory(category: Category){
+    console.log(category);
+    await this.categoryService.deleteCategory(category.id).subscribe((data)=>{
+    });
+
+    const index = this.categories.indexOf(category)
+      this.categories.splice(index, 1);
   }
 
 
