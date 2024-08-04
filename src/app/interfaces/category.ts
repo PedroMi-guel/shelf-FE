@@ -2,5 +2,7 @@ export interface Category {
   id: number;
   name: string;
   description: string;
-  image: string;
+  image?: string;
+  file?:any;
+  folder?:string;
 }

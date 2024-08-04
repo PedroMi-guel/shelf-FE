@@ -10,4 +10,28 @@
       <ion-title size="large">newCategory</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Agregar Categoria</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="newCategory.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-input type="text" [(ngModel)]="newCategory.description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">URL IMG</ion-label>
+      <ion-input type="file" id="file-upload" (change)="setImage($event)"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="addCategory()">Agregar Producto</ion-button>
+  </ion-content>
+
 </ion-content>
