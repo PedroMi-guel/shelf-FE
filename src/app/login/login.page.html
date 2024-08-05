@@ -1,56 +1,36 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+  <ion-toolbar  class="ion-text-center">
+    <ion-title  class="ion-text-center">Iniciar sesión</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">login</ion-title>
+      <ion-title  size="large" color="white">Iniciar sesión</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
-<ion-header >
-  <ion-toolbar>
+  <ion-grid  class="ion-align-items-center ion-align-content-center">
 
-      <ion-title >Inicio de sesión</ion-title>
+    <ion-row  class="ion-align-items-center ion-align-content-center height">
 
-  </ion-toolbar>
-</ion-header>
-<ion-avatar  style="margin: 0 auto;">
-<img alt="person" src="https://ionicframework.com/docs/img/demos/avatar.svg"  />
-</ion-avatar>
-<ion-content class="ion-padding">
-  <form [formGroup]="form" (submit)="ngOnInit()">
-      <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input type="email" required formControlName="email"></ion-input>
-      </ion-item>
-      <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input type="password" required formControlName="password"></ion-input>
-      </ion-item>
-      <ion-button  color="dark" round outline type="submit" class="ion-margin-top" expand="block" [disabled]="form.invalid">Iniciar Sesión</ion-button>
-  </form>
 
+    <ion-col class="ion-align-items-center ion-align-content-center height">
+
+    <form style="margin-top: 180px;" action="" [formGroup]="formLogin">
+
+    <ion-input  class="input" fill="outline" label="Correo electrónico" [clearInput]="true" labelPlacement="floating" type="email" formControlName="email"></ion-input>
+
+
+    <ion-input class="input" style="margin-top: 55px;" fill="outline" label="Contraseña" labelPlacement="floating" type="password" formControlName="password"></ion-input>
+    </form>
+    </ion-col>
+    </ion-row>
+
+    <ion-button (click)="iniciar()"  style="margin-top: 55px;" expand="block" fill="clear" shape="round" [disabled]="formLogin.invalid">
+      Iniciar sesion
+    </ion-button>
+  </ion-grid>
 
 </ion-content>
-<ion-tabs>
-<ion-tab-bar slot="bottom">
- <ion-back-button color="primary" defaultHref="seccion"></ion-back-button>
-</ion-tab-bar>
-</ion-tabs>

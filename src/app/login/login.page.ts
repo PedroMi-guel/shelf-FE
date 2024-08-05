@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,16 +8,23 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+formLogin:FormGroup;
 
-  constructor() { }
-  form = new FormGroup({
-    password: new FormControl('',[Validators.required, Validators.minLength(8)]),
-    email: new FormControl('',[Validators.required, Validators.minLength(8)]),
-
-
-  });
+  constructor(private formBuilder: FormBuilder, private ls: LoginService) {
+    this.formLogin = this.formBuilder.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required]
+    })
+  }
 
   ngOnInit() {
+  }
+
+  iniciar(){
+    this.ls.login(this.formLogin.value).subscribe((data)=>{
+      console.log(data);
+      console.log('se inicio sesión')
+    })
   }
 
 }
