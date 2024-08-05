@@ -27,8 +27,10 @@
               </ion-card-header>
 
               <ion-card-content>
-                <ion-button expand="block" routerLink="/admin">Admin</ion-button>
-                <ion-button expand="block" routerLink="/user">User</ion-button>
+                <ion-button expand="block" [navPush]="ADMINPage" routerLink="/admin">Admin</ion-button>
+                <br>
+                <ion-button expand="block" [navPush]="USERPage" routerLink="/user">User</ion-button>
+                <br>
               </ion-card-content>
             </ion-card>
           </ion-col>
