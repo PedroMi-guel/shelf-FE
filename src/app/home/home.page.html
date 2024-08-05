@@ -1,20 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      LogIn
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>MENÚ</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-row >
+        <ion-col *ngFor="let p of pages" size="12" class="ion-padding">
+      <ion-item (click)="navigateToPage(p.ruta)">
+          <ion-icon [name]="p.icon"></ion-icon>
+        {{p.name}}
+      </ion-item>
+        </ion-col>
+
+      </ion-row>
+
+
+    </ion-content>
+
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+        <ion-title>WELCOMWE SHELF</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+ </div>
 </ion-content>

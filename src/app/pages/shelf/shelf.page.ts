@@ -19,12 +19,12 @@ export class ShelfPage {
   pages: Menu[]=[
     {
       name: 'Categorias',
-      icon: 'cart-outline',
+      icon: 'bookmarks-outline',
       ruta:'../category'
     },
     {
       name: 'Carrito',
-      icon: 'bookmarks-outline',
+      icon: 'cart-outline',
       ruta:'../element'
 
     },

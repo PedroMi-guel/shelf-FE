@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { CategoryPageRoutingModule } from './category-routing.module';
 
 import { CategoryPage } from './category.page';
+import { TextPipe } from 'src/app/pipes/text.pipe';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { CategoryPage } from './category.page';
     IonicModule,
     CategoryPageRoutingModule
   ],
-  declarations: [CategoryPage]
+  declarations: [CategoryPage, TextPipe]
 })
 export class CategoryPageModule {}

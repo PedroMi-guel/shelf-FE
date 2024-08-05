@@ -1,5 +1,5 @@
 import { Injectable} from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Category } from '../interfaces/category';
 
 
@@ -18,7 +18,9 @@ export class CategoryService {
     return this.http.get<Category>(`http://localhost:3000/api/categories/${id}`);
   }
 
-  createCategory(category: Category) {
+  createCategory(category: any) {
+    let headers= new HttpHeaders();
+    headers=headers.append('enctype','multipart/from-data')
     return this.http.post<Category>('http://localhost:3000/api/categories', category);
   }
 
