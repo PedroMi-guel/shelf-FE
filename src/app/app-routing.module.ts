@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'profile', loadChildren: () => import('shelf-FE/src/app/PROFILE/profile.module.ts').then(m=> m.ProfilePageModule)
+    path: 'profile', loadChildren: () => import('src/app/PROFILE/profile.module').then(m=> m.ProfilePageModule)
   }
 ];
 
