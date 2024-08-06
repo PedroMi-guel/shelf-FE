@@ -7,14 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { ShelfPageRoutingModule } from './shelf-routing.module';
 
 import { ShelfPage } from './shelf.page';
+import { NavbarMnuComponent } from 'src/app/components/navbar-mnu/navbar-mnu.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ShelfPageRoutingModule
+    ShelfPageRoutingModule,
+    NavbarMnuComponent,
+
   ],
-  declarations: [ShelfPage]
+  declarations: [ShelfPage],
+  exports:[ShelfPageRoutingModule]
 })
 export class ShelfPageModule {}

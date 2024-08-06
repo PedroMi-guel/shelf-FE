@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Directive, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 interface Menu{
@@ -6,7 +6,6 @@ interface Menu{
   icon:string;
   ruta:string;
 }
-
 
 @Component({
   selector: 'app-shelf',
@@ -20,7 +19,7 @@ export class ShelfPage {
     {
       name: 'Categorias',
       icon: 'bookmarks-outline',
-      ruta:'../category'
+      ruta: 'category'
     },
     {
       name: 'Carrito',

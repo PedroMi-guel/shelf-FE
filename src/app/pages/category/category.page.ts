@@ -20,16 +20,26 @@ export class CategoryPage implements OnInit {
 
   async deleteCategory(category: Category){
     console.log(category);
-    await this.categoryService.deleteCategory(category.id).subscribe((data)=>{
-    });
+    alert('Categoría eliminada')
+    await this.categoryService.deleteCategory(category.id).subscribe((data)=>{}
+
+  );
 
     const index = this.categories.indexOf(category)
       this.categories.splice(index, 1);
   }
 
+  // showAlert(message:string){
+  //   const alertdialog = await this.alert.create({
+  //     message: message
+  //   })
+
+  //   await alertdialog.show
+  // }
+
 
   constructor(
-    private alertController: AlertController,
+    private alert: AlertController,
     private router:Router,
     private categoryService:CategoryService
   ) {

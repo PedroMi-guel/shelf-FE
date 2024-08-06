@@ -1,19 +1,10 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Categorias</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title style="font-family:'Helvetica Neue';" size="large">Categorias</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <app-navbar-mnu title="Category"></app-navbar-mnu>
 
-  <div>
+  <div  class="ion-margin-top ion-padding-top">
     <ion-grid>
-      <ion-row >
+      <ion-row class="ion-padding-top">
         <ion-col size="6" >
           <ion-card *ngFor="let category  of categories" class="card" >
               <ion-img class="img" [src]="category.image"  ></ion-img>

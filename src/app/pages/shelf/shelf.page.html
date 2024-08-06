@@ -1,39 +1,29 @@
+<!-- <ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Shelf</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content [fullscreen]="true">
+  <ion-content>
+    <ion-row >
+      <ion-col *ngFor="let p of pages" size="12" class="ion-padding">
+    <ion-item (click)="navigateToPage(p.ruta)">
+        <ion-icon [name]="p.icon"></ion-icon>
+      {{p.name}}
+    </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-content>
 
-  <ion-menu contentId="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>MENÚ</ion-title>
-      </ion-toolbar>
-    </ion-header>
+</ion-menu>
 
-    <ion-content>
-      <ion-row >
-        <ion-col *ngFor="let p of pages" size="12" class="ion-padding">
-      <ion-item (click)="navigateToPage(p.ruta)">
-          <ion-icon [name]="p.icon"></ion-icon>
-        {{p.name}}
-      </ion-item>
-        </ion-col>
+<div class="ion-page" id="main-content">
+  <app-navbar-mnu></app-navbar-mnu>
+  <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+</div> -->
 
-      </ion-row>
-
-
-    </ion-content>
-
-  </ion-menu>
-  <div class="ion-page" id="main-content">
-    <ion-header>
-      <ion-toolbar>
-
-        <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-
-        <ion-title>WELCOMWE SHELF</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
- </div>
-</ion-content>
+<div class="ion-page" id="main-content">
+  <app-navbar-mnu title="shelf"></app-navbar-mnu>
+  <router-outlet></router-outlet>
+</div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CategoryService } from 'src/app/service/category.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Category } from 'src/app/interfaces/category';
+import { Route, Router } from '@angular/router';
 
 interface Image {
   name: string;
@@ -26,7 +27,8 @@ categoryForm=new FormGroup(
 
 
   constructor(
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private router:Router,
   ) { }
 
   setImage(_event:any) {
@@ -45,6 +47,8 @@ categoryForm=new FormGroup(
       this.categoryService.createCategory(formData).subscribe(
         (Category)=>{
           console.log('Categoria crreada con éxito: ', Category);
+        this.categoryForm.reset()
+        this.router.navigate(['/category'])
         }
       );
     }
