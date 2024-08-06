@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { RegistroService } from './registro.service';
 
 @Component({
   selector: 'app-registro',
@@ -8,10 +9,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class RegistroPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private rs:RegistroService
+  ) { }
   form = new FormGroup({
     name: new FormControl('',[Validators.required, Validators.minLength(5)]),
-    lastname: new FormControl('',[Validators.required, Validators.minLength(5)]),
+    lastName: new FormControl('',[Validators.required, Validators.minLength(5)]),
     email: new FormControl('',[Validators.required, Validators.minLength(8)]),
     password: new FormControl('',[Validators.required, Validators.minLength(8)]),
 
@@ -19,6 +22,12 @@ export class RegistroPage implements OnInit {
 
 
   ngOnInit() {
+  }
+
+  register(){
+    this.rs.register(this.form.value).subscribe((data)=>{
+      console.log(data)
+    })
   }
 
 }

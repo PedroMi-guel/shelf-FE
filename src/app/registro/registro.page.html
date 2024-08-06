@@ -5,35 +5,35 @@
 
   </ion-toolbar>
 </ion-header>
-<ion-avatar style="margin: 0 auto;">
-  <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-</ion-avatar>
-<form [formGroup]="form" (submit)="ngOnInit()">
-  <ion-item>
-      <ion-label position="floating">Name</ion-label>
-      <ion-input type="text" required formControlName="name"></ion-input>
-  </ion-item>
-  <ion-item>
-      <ion-label position="floating">Lastname</ion-label>
-      <ion-input type="text" required formControlName="lastname"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Email</ion-label>
-    <ion-input type="email" required formControlName="email"></ion-input>
-</ion-item>
-  <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required formControlName="password"></ion-input>
-  </ion-item>
-  <ion-button color="dark" round outline  type="submit" class="ion-margin-top" expand="block" [disabled]="form.invalid">Registrar</ion-button>
 
+<ion-content [fullscreen]="true">
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-input label="Nombre" labelPlacement="floating" class="input ion-margin-top" type="text" required formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Apellidos" labelPlacement="floating" class="input ion-margin-top" type="text" required formControlName="lastName"></ion-input>
+    </ion-item>
+  <ion-item>
+    <ion-input label="Correo electronico" labelPlacement="floating" class="input ion-margin-top" type="email" required formControlName="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Contraseña"  labelPlacement="floating"  class="input ion-margin-top" type="password" required formControlName="password"></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="register()"  style="margin-top: 55px;" expand="block" fill="clear" shape="round" [disabled]="form.invalid">
+      Iniciar sesion
+    </ion-button>
+  </ion-item>
 </form>
 
 
 
 
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
     <ion-back-button color="primary" defaultHref="seccion"></ion-back-button>
-    </ion-tab-bar>
-  </ion-tabs>
+  </ion-tab-bar>
+</ion-tabs>
+</ion-content>
