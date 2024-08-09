@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryService } from 'src/app/service/category.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Category } from 'src/app/interfaces/category';
 import { Route, Router } from '@angular/router';
+import { CategoryService } from 'src/app/services/category.service';
 
 interface Image {
   name: string;
