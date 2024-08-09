@@ -1,5 +1,4 @@
-
-<ion-menu contentId="main-content">
+<!-- <ion-menu contentId="main-content">
   <ion-header>
     <ion-toolbar>
       <ion-title>Shelf</ion-title>
@@ -9,10 +8,10 @@
   <ion-content>
     <ion-row >
       <ion-col *ngFor="let p of pages" size="12" class="ion-padding">
-    <ion-menu-toggle (click)="navigateToPage(p.ruta)">
+    <ion-item (click)="navigateToPage(p.ruta)">
         <ion-icon [name]="p.icon"></ion-icon>
       {{p.name}}
-    </ion-menu-toggle>
+    </ion-item>
       </ion-col>
     </ion-row>
   </ion-content>
@@ -20,9 +19,11 @@
 </ion-menu>
 
 <div class="ion-page" id="main-content">
-   <ion-content>
+  <app-navbar-mnu></app-navbar-mnu>
+  <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+</div> -->
+
+<div class="ion-page" id="main-content">
+  <app-navbar-mnu title="shelf"></app-navbar-mnu>
   <router-outlet></router-outlet>
-
-  </ion-content>
 </div>
-
