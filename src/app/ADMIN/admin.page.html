@@ -8,12 +8,15 @@
       href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <ion-app>
       <ion-header>
         <ion-toolbar>
-          <ion-title>Administrador</ion-title>
+          <ion-title style="font-family:'Montserrat">Administrador</ion-title>
         </ion-toolbar>
       </ion-header>
 
@@ -23,15 +26,15 @@
             <ion-col size="12" size-md="6" size-lg="4">
               <ion-card>
                 <ion-card-header>
-                  <ion-card-title>
+                  <ion-card-title style="font-family:'Montserrat">
                     <ion-icon name="person-circle" size="large"></ion-icon>
-                    Admin Login
+                    Administrador
                   </ion-card-title>
                 </ion-card-header>
 
                 <ion-card-content>
                   <ion-item>
-                    <ion-label position="floating"
+                    <ion-label position="floating" style="font-family:'Montserrat"
                       >Correo Electrónico</ion-label
                     >
                     <br />
@@ -39,12 +42,12 @@
                   </ion-item>
 
                   <ion-item>
-                    <ion-label position="floating">Contraseña</ion-label>
+                    <ion-label position="floating" style="font-family:'Montserrat">Contraseña</ion-label>
                     <br />
                     <ion-input type="password"></ion-input>
                   </ion-item>
 
-                  <ion-button expand="block" routerLink="/admin-dashboard"
+                  <ion-button expand="block" routerLink="/admin-dashboard" style="font-family:'Montserrat"
                     >Ingresar</ion-button
                   >
                 </ion-card-content>
@@ -53,7 +56,7 @@
           </ion-row>
         </ion-grid>
 
-        <ion-footer class="ion-text-center ion-padding">
+        <ion-footer class="ion-text-center ion-padding" style="font-family:'Montserrat">
           <p style="color: #888">Your company tagline here</p>
         </ion-footer>
       </ion-content>

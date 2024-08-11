@@ -8,24 +8,29 @@
       href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <ion-app>
       <ion-header>
         <ion-toolbar>
-          <ion-title>Perfil del Cliente</ion-title>
+          <ion-title style="font-family:'Montserrat">Perfil del Cliente</ion-title>
         </ion-toolbar>
       </ion-header>
 
       <ion-content>
         <ion-list>
           <ion-item>
-            <ion-label position="floating">Nombre</ion-label>
+            <ion-label position="floating" style="font-family:'Montserrat">Nombre</ion-label>
+            <br />
             <ion-input [(ngModel)]="profile.name" required></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label position="floating">Email</ion-label>
+            <ion-label position="floating" style="font-family:'Montserrat">Email</ion-label>
+            <br />
             <ion-input
               [(ngModel)]="profile.email"
               type="email"
@@ -33,7 +38,8 @@
             ></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label position="floating">Teléfono</ion-label>
+            <ion-label position="floating" style="font-family:'Montserrat">Teléfono</ion-label>
+            <br />
             <ion-input
               [(ngModel)]="profile.phone"
               type="tel"
@@ -41,7 +47,8 @@
             ></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label position="floating">Contraseña</ion-label>
+            <ion-label position="floating" style="font-family:'Montserrat">Contraseña</ion-label>
+            <br />
             <ion-input
               [(ngModel)]="profile.password"
               type="password"
@@ -49,7 +56,8 @@
             ></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label position="floating">Confirmar Contraseña</ion-label>
+            <ion-label position="floating" style="font-family:'Montserrat">Confirmar Contraseña</ion-label>
+            <br />
             <ion-input
               [(ngModel)]="confirmPassword"
               type="password"
@@ -58,8 +66,12 @@
           </ion-item>
         </ion-list>
         <ion-button expand="full" (click)="updateProfile()"
-          >Actualizar Perfil</ion-button
+        style="font-family:'Montserrat">Actualizar Perfil</ion-button
         >
+      </br>
+      <ion-footer class="ion-text-center ion-padding"  style="font-family:'Montserrat">
+        <p style="color: #888">Your company tagline here</p>
+      </ion-footer>
       </ion-content>
     </ion-app>
 
