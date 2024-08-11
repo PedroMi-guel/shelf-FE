@@ -23,12 +23,13 @@
 
       <ion-content>
         <ion-list>
-          <ion-item>
+          <ion-item style="border:1px solid #ccc; border-radius:10px">
             <ion-label position="floating" style="font-family:'Montserrat">Nombre</ion-label>
             <br />
             <ion-input [(ngModel)]="profile.name" required></ion-input>
           </ion-item>
-          <ion-item>
+          <br />
+          <ion-item style="border:1px solid #ccc; border-radius:10px">
             <ion-label position="floating" style="font-family:'Montserrat">Email</ion-label>
             <br />
             <ion-input
@@ -37,7 +38,8 @@
               required
             ></ion-input>
           </ion-item>
-          <ion-item>
+          <br />
+          <ion-item style="border:1px solid #ccc; border-radius:10px">
             <ion-label position="floating" style="font-family:'Montserrat">Teléfono</ion-label>
             <br />
             <ion-input
@@ -46,7 +48,8 @@
               required
             ></ion-input>
           </ion-item>
-          <ion-item>
+          <br />
+          <ion-item style="border:1px solid #ccc; border-radius:10px">
             <ion-label position="floating" style="font-family:'Montserrat">Contraseña</ion-label>
             <br />
             <ion-input
@@ -55,7 +58,8 @@
               required
             ></ion-input>
           </ion-item>
-          <ion-item>
+          <br />
+          <ion-item style="border:1px solid #ccc; border-radius:10px">
             <ion-label position="floating" style="font-family:'Montserrat">Confirmar Contraseña</ion-label>
             <br />
             <ion-input
@@ -64,9 +68,10 @@
               required
             ></ion-input>
           </ion-item>
+          <br />
         </ion-list>
         <ion-button expand="full" (click)="updateProfile()"
-        style="font-family:'Montserrat">Actualizar Perfil</ion-button
+        style="font-family:'Montserrat" style="border:2px solid #ccc;border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2);">Actualizar Perfil</ion-button
         >
       </br>
       <ion-footer class="ion-text-center ion-padding"  style="font-family:'Montserrat">
