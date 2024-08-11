@@ -8,16 +8,18 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
-
   profile: any = {
     name: '',
     email: '',
     phone: '',
-    password: ''
+    password: '',
   };
   confirmPassword: string = '';
 
-  constructor(private profileService: ProfileService, private alertController: AlertController) { }
+  constructor(
+    private profileService: ProfileService,
+    private alertController: AlertController
+  ) {}
 
   ngOnInit() {
     this.loadProfile();
@@ -35,7 +37,7 @@ export class ProfilePage implements OnInit {
       const alert = await this.alertController.create({
         header: 'Error',
         message: 'Las contraseñas no coinciden.',
-        buttons: ['OK']
+        buttons: ['OK'],
       });
       await alert.present();
       return;
@@ -45,7 +47,7 @@ export class ProfilePage implements OnInit {
     const alert = await this.alertController.create({
       header: 'Éxito',
       message: 'Perfil actualizado correctamente.',
-      buttons: ['OK']
+      buttons: ['OK'],
     });
     await alert.present();
   }

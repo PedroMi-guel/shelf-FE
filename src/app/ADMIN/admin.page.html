@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Administrador</title>
-  <link href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" rel="stylesheet">
-</head>
-<body>
-  <ion-app>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Administrador</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administrador</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Administrador</ion-title>
+        </ion-toolbar>
+      </ion-header>
 
-    <ion-content class="ion-padding">
-      <ion-grid>
-        <ion-row class="ion-justify-content-center">
-          <ion-col size="12" size-md="6" size-lg="4">
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title>
-                  <ion-icon name="person-circle" size="large"></ion-icon>
-                  Admin Login
-                </ion-card-title>
-              </ion-card-header>
+      <ion-content class="ion-padding">
+        <ion-grid>
+          <ion-row class="ion-justify-content-center">
+            <ion-col size="12" size-md="6" size-lg="4">
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title>
+                    <ion-icon name="person-circle" size="large"></ion-icon>
+                    Admin Login
+                  </ion-card-title>
+                </ion-card-header>
 
-              <ion-card-content>
-                <ion-item>
-                  <ion-label position="floating">Correo Electrónico</ion-label>
-                  <br>
-                  <ion-input type="email"></ion-input>
-                </ion-item>
+                <ion-card-content>
+                  <ion-item>
+                    <ion-label position="floating"
+                      >Correo Electrónico</ion-label
+                    >
+                    <br />
+                    <ion-input type="email"></ion-input>
+                  </ion-item>
 
-                <ion-item>
-                  <ion-label position="floating">Contraseña</ion-label>
-                  <br>
-                  <ion-input type="password"></ion-input>
-                </ion-item>
+                  <ion-item>
+                    <ion-label position="floating">Contraseña</ion-label>
+                    <br />
+                    <ion-input type="password"></ion-input>
+                  </ion-item>
 
-                <ion-button expand="block" routerLink="/admin-dashboard">Ingresar</ion-button>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+                  <ion-button expand="block" routerLink="/admin-dashboard"
+                    >Ingresar</ion-button
+                  >
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
-      <ion-footer class="ion-text-center ion-padding">
-        <p style="color: #888;">Your company tagline here</p>
-      </ion-footer>
-    </ion-content>
-  </ion-app>
+        <ion-footer class="ion-text-center ion-padding">
+          <p style="color: #888">Your company tagline here</p>
+        </ion-footer>
+      </ion-content>
+    </ion-app>
 
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+  </body>
 </html>

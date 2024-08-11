@@ -10,8 +10,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild([{ path: '', component: ProfilePage }])
+    RouterModule.forChild([{ path: '', component: ProfilePage }]),
   ],
-  declarations: [ProfilePage]
+  declarations: [ProfilePage],
 })
-export class ProfilePageModule { }
+export class ProfilePageModule {}

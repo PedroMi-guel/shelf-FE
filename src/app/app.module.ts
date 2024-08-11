@@ -12,14 +12,15 @@ import { ProfileService } from './services/profile.service';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule,
+  imports: [
+    BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    ProfileService
+    ProfileService,
   ],
   bootstrap: [AppComponent],
 })
