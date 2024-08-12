@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ElementPageRoutingModule } from './element-routing.module';
 
 import { ElementPage } from './element.page';
+import { NavbarMnuComponent } from 'src/app/components/navbar-mnu/navbar-mnu.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ElementPageRoutingModule
+    ElementPageRoutingModule,
+    NavbarMnuComponent,
   ],
   declarations: [ElementPage]
 })

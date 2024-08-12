@@ -19,13 +19,13 @@ export class AppComponent implements OnInit {
 
   pages: Menu[]=[
     {
-      name: 'Categorias',
-      icon: 'bookmarks-outline',
-      ruta: 'category'
+      name: 'Perfil',
+      icon: 'person-outline',
+      ruta: './tabs/category'
     },
     {
-      name: 'Carrito',
-      icon: 'cart-outline',
+      name: 'Salir',
+      icon: 'log-out-outline',
       ruta:'../element'
 
     },

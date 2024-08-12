@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { NewCategoryPageRoutingModule } from './new-category-routing.module';
 
 import { NewCategoryPage } from './new-category.page';
+import { NavbarMnuComponent } from 'src/app/components/navbar-mnu/navbar-mnu.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { NewCategoryPage } from './new-category.page';
     FormsModule,
     IonicModule,
     NewCategoryPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NavbarMnuComponent,
   ],
   declarations: [NewCategoryPage]
 })

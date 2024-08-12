@@ -5,13 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { NavbarMnuComponent } from 'src/app/components/navbar-mnu/navbar-mnu.component';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    NavbarMnuComponent,
   ],
   declarations: [Tab1Page]
 })

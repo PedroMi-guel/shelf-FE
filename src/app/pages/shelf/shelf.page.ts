@@ -17,13 +17,13 @@ export class ShelfPage {
 
   pages: Menu[]=[
     {
-      name: 'Categorias',
-      icon: 'bookmarks-outline',
+      name: 'Perfil',
+      icon: 'person-outline',
       ruta: 'category'
     },
     {
-      name: 'Carrito',
-      icon: 'cart-outline',
+      name: 'Cerar sesión',
+      icon: 'log-out--outline',
       ruta:'../element'
 
     },
