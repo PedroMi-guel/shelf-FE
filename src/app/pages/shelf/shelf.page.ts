@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Directive, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 interface Menu{
@@ -8,14 +8,12 @@ interface Menu{
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
+  selector: 'app-shelf',
+  templateUrl: './shelf.page.html',
+  styleUrls: ['./shelf.page.scss'],
 })
-export class AppComponent implements OnInit {
-  constructor(private router:Router) {}
 
-
+export class ShelfPage {
 
   pages: Menu[]=[
     {
@@ -41,10 +39,9 @@ export class AppComponent implements OnInit {
   }
 
 
+  constructor(
+    private router:Router,
+  ) { }
 
 
-  ngOnInit(){
-    console.log();
-
-  }
 }

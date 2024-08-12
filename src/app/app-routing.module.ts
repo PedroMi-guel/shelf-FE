@@ -18,6 +18,23 @@ const routes: Routes = [
     path: 'seccion',
     loadChildren: () => import('./pages/seccion/seccion.module').then( m => m.SeccionPageModule)
   },
+  {
+    path: 'element',
+    loadChildren: () => import('./pages/element/element.module').then( m => m.ElementPageModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./pages/user/user.module').then( m => m.UserPageModule)
+  },
+  {
+    path: 'shelf',
+    loadChildren: () => import('./pages/shelf/shelf.module').then( m => m.ShelfPageModule)
+  },
+  {
+    path: 'new-category',
+    loadChildren: () => import('./pages/new-category/new-category.module').then( m => m.NewCategoryPageModule)
+  },
+
 ];
 @NgModule({
   imports: [
