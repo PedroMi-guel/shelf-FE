@@ -18,8 +18,11 @@
               <ion-button (click)="deleteCategory(category)" >
                 <ion-icon  name="trash-outline"></ion-icon>
               </ion-button>
-              <ion-button >
+              <ion-button (click)="navigateToEdit(category.id)" >
                 <ion-icon name="create-outline"></ion-icon>
+              </ion-button>
+              <ion-button (click)="navigateToAdd(category.id)" >
+                <ion-icon name="add-outline"></ion-icon>
               </ion-button>
             </ion-row>
           </ion-card>

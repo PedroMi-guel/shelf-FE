@@ -12,8 +12,16 @@ const routes: Routes = [
         loadChildren: () => import('./tabs/category/category.module').then(m => m.CategoryPageModule)
       },
       {
+        path: 'editar/:id',
+        loadChildren: () => import('../edit-category/edit-category.module').then(m => m.EditCategoryPageModule)
+      },
+      {
+        path: 'element/:id',
+        loadChildren: () => import('../element/element.module').then(m => m.ElementPageModule)
+      },
+      {
         path: 'pedidos',
-        loadChildren: () => import('./tabs/pedidos/pedidos.module').then( m => m.PedidosPageModule )
+        loadChildren: () => import('./tabs/tab1/tab1.module').then( m => m.Tab1PageModule)
       },
       {
         path: '',
@@ -32,4 +40,5 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
 })
+
 export class TabsPageRoutingModule {}

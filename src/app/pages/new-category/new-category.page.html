@@ -5,21 +5,21 @@
 
 
   <ion-content>
-    <ion-grid ></ion-grid>
+
   <form [formGroup]="categoryForm" >
     <ion-item>
-      <ion-label position="floating">Nombre</ion-label>
-      <ion-input type="text" formControlName="name"></ion-input>
+      <ion-input  label="Nombre categoría" labelPlacement="floating" class="input ion-margin-top" type="text"  formControlName="name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Descripción</ion-label>
-      <ion-input type="text" formControlName="description"></ion-input>
+
+      <ion-input label="Descripción" labelPlacement="floating" class="input ion-margin-top" type="text"   formControlName="description"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Imagen</ion-label>
-      <ion-input type="file" (change)="setImage($event)"></ion-input>
+      <ion-input style="margin-top: 15px;" shape="round"   type="file"  (change)="setImage($event)"></ion-input>
     </ion-item>
-    <ion-button expand="block" (click)="addCategory()">Agregar</ion-button>
+    <ion-item>
+      <ion-button style="margin-top: 55px;" expand="block" fill="clear" shape="round" (click)="addCategory()">Agregar</ion-button>
+    </ion-item>
   </form>
   </ion-content>
 

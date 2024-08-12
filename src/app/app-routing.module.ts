@@ -27,19 +27,20 @@ const routes: Routes = [
     loadChildren: () => import('./pages/user/user.module').then( m => m.UserPageModule)
   },
   {
-    path: 'shelf',
-    loadChildren: () => import('./pages/shelf/shelf.module').then( m => m.ShelfPageModule)
-  },
-  {
     path: 'new-category',
     loadChildren: () => import('./pages/new-category/new-category.module').then( m => m.NewCategoryPageModule)
   },
+  {
+    path: 'edit-category',
+    loadChildren: () => import('./pages/edit-category/edit-category.module').then( m => m.EditCategoryPageModule)
+  },
+
 
 ];
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, bindToComponentInputs:true })
   ],
-  exports: [RouterModule]
+  exports: [RouterModule,]
 })
 export class AppRoutingModule {}

@@ -1,0 +1,20 @@
+<app-navbar-mnu title="Editar Categoría"></app-navbar-mnu>
+<ion-content >
+  <form [formGroup]="categoryForm"  *ngIf="categoria">
+
+    <ion-item>
+      <ion-input  label="Nombre categoría" labelPlacement="floating" class="input ion-margin-top" type="text"  formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+
+      <ion-input label="Descripción" labelPlacement="floating" class="input ion-margin-top" type="text"   formControlName="description" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input style="margin-top: 15px;" shape="round"   type="file"  (change)="setImage($event)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button style="margin-top: 55px;" expand="block" fill="clear" shape="round" (click)="updateCategory()">Guardar</ion-button>
+    </ion-item>
+  </form>
+
+</ion-content>

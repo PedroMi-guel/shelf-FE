@@ -19,6 +19,11 @@ export class AppComponent implements OnInit {
 
   pages: Menu[]=[
     {
+      name: 'Home',
+      icon: 'home-outline',
+      ruta: './tabs/category'
+    },
+    {
       name: 'Perfil',
       icon: 'person-outline',
       ruta: './tabs/category'
@@ -27,13 +32,6 @@ export class AppComponent implements OnInit {
       name: 'Salir',
       icon: 'log-out-outline',
       ruta:'../element'
-
-    },
-    {
-      name: 'Mis pedidos',
-      icon: 'bag-check-outline',
-      ruta:'../home'
-
     },
   ];
   navigateToPage(ruta:string){

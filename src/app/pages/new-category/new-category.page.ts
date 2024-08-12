@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Category } from 'src/app/interfaces/category';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { CategoryService } from 'src/app/services/category.service';
 
 interface Image {
   name: string;
   data: any;
 }
+
 @Component({
   selector: 'app-new-category',
   templateUrl: './new-category.page.html',
@@ -15,6 +15,7 @@ interface Image {
 })
 
 export class NewCategoryPage  {
+  
 selectedFile:File | undefined;
 categoryForm=new FormGroup(
   {
@@ -48,7 +49,7 @@ categoryForm=new FormGroup(
         (Category)=>{
           console.log('Categoria crreada con éxito: ', Category);
         this.categoryForm.reset()
-        this.router.navigate(['/category'])
+        this.router.navigate(['/tabs/category'])
         }
       );
     }

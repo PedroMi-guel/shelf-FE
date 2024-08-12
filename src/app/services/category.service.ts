@@ -24,7 +24,7 @@ export class CategoryService {
     return this.http.post<Category>('http://localhost:3000/api/categories', category);
   }
 
-  updateCategory(category: Category) {
+  updateCategory(category: any) {
     return this.http.put<Category>(`http://localhost:3000/api/categories/${category.id}`, category);
   }
 
