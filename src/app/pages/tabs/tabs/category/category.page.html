@@ -1,11 +1,11 @@
+<app-navbar-mnu title="Inventario"></app-navbar-mnu>
 
 <ion-content>
-  <app-navbar-mnu title="Category"></app-navbar-mnu>
 
   <div  class="ion-margin-top ion-padding-top">
     <ion-grid>
       <ion-row class="ion-padding-top">
-        <ion-col size="6" >
+        <ion-col>
           <ion-card *ngFor="let category  of categories" class="card" >
               <ion-img class="img" [src]="category.image"  ></ion-img>
             <ion-card-header>
@@ -29,9 +29,9 @@
   </div>
 
 </ion-content>
-<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+<ion-fab class="ion-margin-bottom" slot="fixed" vertical="bottom" horizontal="end">
   <ion-fab-button>
-    <ion-icon  (click)="navigateToNew()" name="add-circle-outline"></ion-icon>
+    <ion-icon color="white" (click)="navigateToNew()" name="add-outline"></ion-icon>
   </ion-fab-button>
 </ion-fab>
 
@@ -50,13 +50,12 @@
     position: inherit;
     align-self: center;
     align-content: center;
-    width: 250px;
+    width: 90%;
     height: 400px;
     padding: 5%;
     border: 5%;
   }
   .img{
-    width: 200px;
-    height: 150px;
+    width: 100%;
   }
 </style>

@@ -19,22 +19,11 @@ export class AppComponent implements OnInit {
 
   pages: Menu[]=[
     {
-      name: 'Categorias',
-      icon: 'bookmarks-outline',
-      ruta: 'category'
+      name: 'Perfil',
+      icon: 'person-outline',
+      ruta: 'user'
     },
-    {
-      name: 'Carrito',
-      icon: 'cart-outline',
-      ruta:'../element'
 
-    },
-    {
-      name: 'Mis pedidos',
-      icon: 'bag-check-outline',
-      ruta:'../home'
-
-    },
   ];
   navigateToPage(ruta:string){
     this.router.navigate([ruta])
