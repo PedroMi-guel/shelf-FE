@@ -9,23 +9,21 @@
 <ion-content [fullscreen]="true">
   <form [formGroup]="form">
     <ion-item>
-      <ion-input label="Nombre" labelPlacement="floating" class="input ion-margin-top" type="text" required formControlName="name"></ion-input>
+      <ion-input fill="outline" class="input" label="Nombre" labelPlacement="floating" class="input ion-margin-top" type="text" required formControlName="name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input label="Apellidos" labelPlacement="floating" class="input ion-margin-top" type="text" required formControlName="lastName"></ion-input>
+      <ion-input fill="outline" class="input" label="Apellidos" labelPlacement="floating" class="input ion-margin-top" type="text" required formControlName="lastName"></ion-input>
     </ion-item>
   <ion-item>
-    <ion-input label="Correo electronico" labelPlacement="floating" class="input ion-margin-top" type="email" required formControlName="email"></ion-input>
+    <ion-input fill="outline" class="input" label="Correo electronico" labelPlacement="floating" class="input ion-margin-top" type="email" required formControlName="email"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input label="Contraseña"  labelPlacement="floating"  class="input ion-margin-top" type="password" required formControlName="password"></ion-input>
+    <ion-input fill="outline" class="input" label="Contraseña"  labelPlacement="floating"  class="input ion-margin-top" type="password" required formControlName="password"></ion-input>
 
   </ion-item>
-  <ion-item>
-    <ion-button (click)="register()"  style="margin-top: 55px;" expand="block" fill="clear" shape="round" [disabled]="form.invalid">
-      Iniciar sesion
+    <ion-button (click)="register()"  style="margin-top: 55px;" expand="block" shape="round" [disabled]="form.invalid">
+      Registrar
     </ion-button>
-  </ion-item>
 </form>
 
 
