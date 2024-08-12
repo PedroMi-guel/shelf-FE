@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalles del pedido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card>
+  <ion-img src="{{ detailData.element.image }}"></ion-img>
+  <ion-card-header>
+    <ion-card-title>{{ detailData.element.name }}</ion-card-title>
+    <ion-card-subtitle> {{ detailData.element.description }} </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <h2><strong>RESERVACIÓN:</strong></h2>
+    Nombre: {{ detailData.user.name }} {{detailData.user.lastName}}
+    <br>
+    Email: {{ detailData.user.email }}
+    <br>
+    Día de inicio: {{detailData.start_time.split('T')[0] }}
+    <br>
+    Día de termino: {{detailData.end_time.split('T')[0] }}
+
+  </ion-card-content>
+</ion-card>

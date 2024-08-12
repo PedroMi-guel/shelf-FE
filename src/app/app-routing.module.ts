@@ -6,7 +6,18 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)
   },
-
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'seccion',
+    loadChildren: () => import('./pages/seccion/seccion.module').then( m => m.SeccionPageModule)
+  },
   {
     path: 'element',
     loadChildren: () => import('./pages/element/element.module').then( m => m.ElementPageModule)
@@ -23,7 +34,10 @@ const routes: Routes = [
     path: 'new-category',
     loadChildren: () => import('./pages/new-category/new-category.module').then( m => m.NewCategoryPageModule)
   },
-
+  {
+    path: 'page-details/:id',
+    loadChildren: () => import('./pages/page-details/page-details.module').then( m => m.PageDetailsPageModule)
+  },
 
 
 ];
