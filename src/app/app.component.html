@@ -1,3 +1,36 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Shelf</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-row >
+      <ion-col *ngFor="let p of pages" size="12" class="ion-padding">
+    <ion-menu-toggle (click)="navigateToPage(p.ruta)">
+        <ion-icon [name]="p.icon"></ion-icon>
+      {{p.name}}
+    </ion-menu-toggle>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-padding">
+          <ion-menu-toggle (click)="logout()">
+            <ion-icon name="log-out-outline"></ion-icon>
+              Cerrar sesión
+        </ion-menu-toggle>
+      </ion-col>
+    </ion-row>
+  </ion-content>
+
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+   <ion-content>
+  <router-outlet></router-outlet>
+
+  </ion-content>
+</div>
+

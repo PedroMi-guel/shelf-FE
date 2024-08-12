@@ -22,8 +22,7 @@ formLogin:FormGroup;
 
   iniciar(){
     this.ls.login(this.formLogin.value).subscribe((data)=>{
-      console.log(data);
-      console.log('se inicio sesión')
+      this.ls.saveCredentials(data);
     })
   }
 

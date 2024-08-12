@@ -1,0 +1,61 @@
+<app-navbar-mnu title="Inventario"></app-navbar-mnu>
+
+<ion-content>
+
+  <div  class="ion-margin-top ion-padding-top">
+    <ion-grid>
+      <ion-row class="ion-padding-top">
+        <ion-col>
+          <ion-card *ngFor="let category  of categories" class="card" >
+              <ion-img class="img" [src]="category.image"  ></ion-img>
+            <ion-card-header>
+              <ion-card-title style="font-family:'Monserrat';"style="text-transform: uppercase;" >{{category.name | truncate}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content style="font-family:'Monserrat';" style="text-transform: capitalize;">
+              {{category.description |truncate:20 }}
+            </ion-card-content>
+            <ion-row>
+              <ion-button (click)="deleteCategory(category)">
+                <ion-icon color="white" name="trash-outline"></ion-icon>
+              </ion-button>
+              <ion-button>
+                <ion-icon color="white" name="create-outline"></ion-icon>
+              </ion-button>
+            </ion-row>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
+<ion-fab class="ion-margin-bottom" slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button>
+    <ion-icon color="white" (click)="navigateToNew()" name="add-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+
+<style>
+  .botonAdd {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    font-size: 30px;
+    border-radius:5px;
+  }
+  .card{
+    border-radius:15px;
+    position: inherit;
+    align-self: center;
+    align-content: center;
+    width: 90%;
+    height: 400px;
+    padding: 5%;
+    border: 5%;
+  }
+  .img{
+    width: 100%;
+  }
+</style>
