@@ -12,11 +12,35 @@
   </ion-header>
 
   @for (pedido of pedidos; track $index) {
-    <ion-item>
-      <ion-avatar>
-        <img [src]="pedido.elements[0].image" />
-      </ion-avatar>
-      {{pedido.user.name}} {{pedido.user.lastName}}
-    </ion-item>
+    
+    <ion-item-sliding>
+      <ion-item button detail (click)="goToDetail(pedido.id)">
+        <ion-avatar slot="start">
+          <img [src]="pedido.element.image" />
+        </ion-avatar>
+        <ion-label>
+          <h2>{{pedido.element.name}}</h2>
+          <p>Pedido por: {{pedido.user.name}} {{pedido.user.lastName}} </p>
+        </ion-label>
+        <app-details [id]="pedido.id"></app-details>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="success">Aceptar</ion-item-option>
+        <ion-item-option color="danger">Rechazar</ion-item-option>
+        <ion-item-option >Revisar</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
   }
 </ion-content>
+
+<!-- <ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <h2>Pedido: Hola</h2>
+        <p>Cliente: adios</p>
+        <p>Estado: activo</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content> -->

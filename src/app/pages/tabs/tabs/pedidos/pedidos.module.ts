@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PedidosPageRoutingModule } from './pedidos-routing.module';
 
 import { PedidosPage } from './pedidos.page';
+import { DetailsComponent } from 'src/app/components/details/details.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PedidosPageRoutingModule
+    PedidosPageRoutingModule,
+    DetailsComponent
   ],
   declarations: [PedidosPage]
 })

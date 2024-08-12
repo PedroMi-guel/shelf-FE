@@ -34,6 +34,11 @@ const routes: Routes = [
     path: 'new-category',
     loadChildren: () => import('./pages/new-category/new-category.module').then( m => m.NewCategoryPageModule)
   },
+  {
+    path: 'page-details/:id',
+    loadChildren: () => import('./pages/page-details/page-details.module').then( m => m.PageDetailsPageModule)
+  },
+
 
 ];
 @NgModule({
