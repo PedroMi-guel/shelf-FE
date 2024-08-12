@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouteReuseStrategy } from '@angular/router';
 import { UserPage } from './pages/user/user.page';
+import { ProfileService } from './services/profile.service';
 
 @NgModule({
   declarations: [AppComponent],

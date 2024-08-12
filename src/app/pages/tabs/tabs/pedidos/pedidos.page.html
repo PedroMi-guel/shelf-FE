@@ -1,26 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Pedidos</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-navbar-mnu title="Pedidos"></app-navbar-mnu>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Pedidos</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   @for (pedido of pedidos; track $index) {
-    
+
     <ion-item-sliding>
       <ion-item button detail (click)="goToDetail(pedido.id)">
         <ion-avatar slot="start">
-          <img [src]="pedido.element.image" />
+          <img [src]="pedido.elements[0].image" />
         </ion-avatar>
         <ion-label>
-          <h2>{{pedido.element.name}}</h2>
           <p>Pedido por: {{pedido.user.name}} {{pedido.user.lastName}} </p>
+          @for (element of pedido.elements; track $index) {
+            <ion-chip>{{element.name}}</ion-chip>
+            }
         </ion-label>
         <app-details [id]="pedido.id"></app-details>
       </ion-item>

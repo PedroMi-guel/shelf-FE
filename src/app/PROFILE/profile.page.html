@@ -1,0 +1,61 @@
+
+      <ion-header>
+        <ion-toolbar>
+          <ion-title class="montse">Perfil del Cliente</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list>
+          <ion-item class="border">
+            <ion-label position="floating" class="montse">Nombre</ion-label>
+            <br />
+            <ion-input [(ngModel)]="profile.name" required></ion-input>
+          </ion-item>
+          <br />
+          <ion-item class="border">
+            <ion-label position="floating" class="montse">Email</ion-label>
+            <br />
+            <ion-input
+              [(ngModel)]="profile.email"
+              type="email"
+              required
+            ></ion-input>
+          </ion-item>
+          <br />
+          <ion-item class="border">
+            <ion-label position="floating" class="montse">Teléfono</ion-label>
+            <br />
+            <ion-input
+              [(ngModel)]="profile.phone"
+              type="tel"
+              required
+            ></ion-input>
+          </ion-item>
+          <br />
+          <ion-item class="border">
+            <ion-label position="floating" class="montse">Contraseña</ion-label>
+            <br />
+            <ion-input
+              [(ngModel)]="profile.password"
+              type="password"
+              required
+            ></ion-input>
+          </ion-item>
+          <br />
+          <ion-item class="border">
+            <ion-label position="floating" class="montse">Confirmar Contraseña</ion-label>
+            <br />
+            <ion-input
+              [(ngModel)]="confirmPassword"
+              type="password"
+              required
+            ></ion-input>
+          </ion-item>
+          <br />
+        </ion-list>
+        <ion-button expand="full" (click)="updateProfile()"
+        class="montse border2" >Actualizar Perfil</ion-button
+        >
+      <br>
+      </ion-content>

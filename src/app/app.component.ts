@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from './services/login.service';
 
 interface Menu{
   name:string;
@@ -13,7 +14,7 @@ interface Menu{
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private router:Router) {}
+  constructor(private router:Router, private loginService:LoginService) {}
 
 
 
@@ -21,7 +22,7 @@ export class AppComponent implements OnInit {
     {
       name: 'Perfil',
       icon: 'person-outline',
-      ruta: 'user'
+      ruta: 'profile'
     },
 
   ];
@@ -30,7 +31,9 @@ export class AppComponent implements OnInit {
   }
 
 
-
+  logout(){
+    this.loginService.logout()
+  }
 
   ngOnInit(){
     console.log();

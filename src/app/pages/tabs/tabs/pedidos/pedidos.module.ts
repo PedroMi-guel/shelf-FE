@@ -8,6 +8,7 @@ import { PedidosPageRoutingModule } from './pedidos-routing.module';
 
 import { PedidosPage } from './pedidos.page';
 import { DetailsComponent } from 'src/app/components/details/details.component';
+import { NavbarMnuComponent } from 'src/app/components/navbar-mnu/navbar-mnu.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { DetailsComponent } from 'src/app/components/details/details.component';
     FormsModule,
     IonicModule,
     PedidosPageRoutingModule,
-    DetailsComponent
+    DetailsComponent,
+    NavbarMnuComponent
   ],
   declarations: [PedidosPage]
 })
