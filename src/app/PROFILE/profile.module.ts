@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ProfilePage } from './profile.page';
 import { RouterModule } from '@angular/router';
+import { NavbarMnuComponent } from '../components/navbar-mnu/navbar-mnu.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild([{ path: '', component: ProfilePage }])
+    RouterModule.forChild([{ path: '', component: ProfilePage }]),
+    NavbarMnuComponent
   ],
   declarations: [ProfilePage]
 })

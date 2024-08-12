@@ -30,6 +30,9 @@ export class AppComponent implements OnInit {
     this.router.navigate([ruta])
   }
 
+  navigateToHome(){
+    this.router.navigate(['/'])
+  }
 
   logout(){
     this.loginService.logout()

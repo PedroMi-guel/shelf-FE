@@ -52,6 +52,10 @@ const routes: Routes = [
   {
     path: 'profile', loadChildren: () => import('src/app/PROFILE/profile.module').then(m=> m.ProfilePageModule),
     canActivate: [AuthGuard]
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 
